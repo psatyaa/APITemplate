@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Domain", "APITe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Service", "APITemplate.Service\APITemplate.Service.csproj", "{2004748D-7BA7-4E38-B390-645F64F69DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITemplate.Repository", "APITemplate.Repository\APITemplate.Repository.csproj", "{C9815E24-CC2E-4B9C-B73E-B1107F545A99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Repository", "APITemplate.Repository\APITemplate.Repository.csproj", "{C9815E24-CC2E-4B9C-B73E-B1107F545A99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Data", "API.Data.Persistence\API.Data.csproj", "{3FC19964-5E26-4B63-B166-60D92AE35B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Data", "API.Data.Persistence\APITemplate.Data.csproj", "{3FC19964-5E26-4B63-B166-60D92AE35B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

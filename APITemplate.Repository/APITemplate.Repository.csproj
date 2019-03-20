@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\API.Data.Persistence\API.Data.csproj" />
+    <ProjectReference Include="..\API.Data.Persistence\APITemplate.Data.csproj" />
   </ItemGroup>
 
 </Project>
