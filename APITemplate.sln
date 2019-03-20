@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Repository", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITemplate.Data", "API.Data.Persistence\APITemplate.Data.csproj", "{3FC19964-5E26-4B63-B166-60D92AE35B77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITemplate.UnitTest", "APITemplate.UnitTest\APITemplate.UnitTest.csproj", "{FC63C2FC-991B-4F3C-A0A5-6B3F3FA59A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3FC19964-5E26-4B63-B166-60D92AE35B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC19964-5E26-4B63-B166-60D92AE35B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC19964-5E26-4B63-B166-60D92AE35B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC63C2FC-991B-4F3C-A0A5-6B3F3FA59A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC63C2FC-991B-4F3C-A0A5-6B3F3FA59A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC63C2FC-991B-4F3C-A0A5-6B3F3FA59A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC63C2FC-991B-4F3C-A0A5-6B3F3FA59A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
