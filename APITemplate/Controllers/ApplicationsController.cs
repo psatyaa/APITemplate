@@ -6,6 +6,7 @@ using APITemplate.Domain.Models;
 using APITemplate.Domain.Resources.Responses;
 using APITemplate.Service.Interfaces;
 using AutoMapper;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APITemplate.API.Controllers
@@ -24,6 +25,7 @@ namespace APITemplate.API.Controllers
 
         // GET: api/Applications
         [HttpGet]
+        [EnableQuery]
         public async Task<IEnumerable<ApplicationResource>> Get()
         {
             var applications = await _appService.ListAsync();

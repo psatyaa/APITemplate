@@ -4,6 +4,7 @@ using APITemplate.Repository.Interface;
 using APITemplate.Service.Implementation;
 using APITemplate.Service.Interfaces;
 using AutoMapper;
+using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -35,6 +36,8 @@ namespace APITemplate
             services.AddScoped<IApplicationRepository, ApplicationRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper();
+            //Enables OData Funictionality.
+            services.AddOData();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +54,14 @@ namespace APITemplate
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //Enable Odata Query on existing Api endpoints.
+            app.UseMvc(routeBuilder => 
+            {
+                routeBuilder.EnableDependencyInjection();
+                //Following Query Functionality is added on existing URL. append wit $sign.
+                //Like: https://localhost:44397/api/Applications?$select=appName
+                routeBuilder.Expand().Select().Filter().MaxTop(10).OrderBy();
+            });
         }
     }
 }

@@ -23,12 +23,14 @@ namespace APITemplate.UnitTest.Service
         public void ListAsync()
         {
             var applicationRepository = new Mock<IApplicationRepository>();
-            applicationRepository.Setup(x => x.ListAsync()).Returns(Task.FromResult(applications));
+            applicationRepository.Setup(x => x.ListAsync()).Returns( Task.FromResult(applications));
             //var unitOfWork = new Mock<UnitOfWork>();
             //unitOfWork.Setup(x => x.CompleteAsync()).Returns(Task.FromResult(applications));
             var applicationService = new ApplicationService(applicationRepository.Object, null);
             var result = applicationService.ListAsync();
+            var value = result.Result;
             Assert.IsNotNull(result);
+            Assert.AreEqual(value, applications);
         }
     }
 }
